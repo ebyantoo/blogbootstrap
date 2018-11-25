@@ -1,5 +1,5 @@
 //event pada saat link di klik
-$('.page-scroll').on('click', function(event) { 
+$('.page-scroll').on('click', function (event) {
 
     if (this.hash !== "") {
         // Prevent default anchor click behavior
@@ -9,7 +9,27 @@ $('.page-scroll').on('click', function(event) {
         var hash = this.hash;
 
         $('html, body').animate({
-            scrollTop: $(hash).offset().top -50
+            scrollTop: $(hash).offset().top - 50
         }, 1240, 'swing');
     } // End if
+});
+
+
+// PARALLAX EFFECT 
+// Fix Background Scrolling body
+// 
+
+
+$(window).scroll(function () {
+    var wScroll = $(this).scrollTop();
+
+    $('.jumbotron img').css({
+        'transform': 'translate(0px, ' + wScroll/2 + '%)'
+    });
+
+    $('.jumbotron h1').css({
+        'transform': 'translate(0px, ' + wScroll/2 + '%)'
+    });
+
+   
 });
