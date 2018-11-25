@@ -15,6 +15,7 @@ body {
     background-size: auto;
     background-position:0 -200px;
     color: #eaeaea;
+    overflow: hidden;
 
 }
 
@@ -43,6 +44,21 @@ section {
     background-color: #eee;
 
 }
+
+.portofolio .thumbnail{
+   opacity: 0;
+   transform: translate(0, -40px);
+   transition: .5s;
+
+}
+
+.portofolio .thumbnail.muncul{
+    opacity: 1;
+    transform: translate(0, 0);
+ }
+ 
+
+
 
 .contact {
     min-height: 800px;
