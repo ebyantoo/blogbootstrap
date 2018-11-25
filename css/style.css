@@ -40,6 +40,22 @@ section {
     min-height: 600px;
 }
 
+.pKiri, .pKanan{
+    opacity: 0;
+    transform: translate(-50px, 0);
+    transition: 1s;
+}
+
+.pKanan {
+    transform: translate(50px, 0);
+}
+
+.pKiri.pMuncul, .pKanan.pMuncul{
+    opacity: 1;
+    transform: translate(0, 0);
+   
+}
+
 .portofolio {
     background-color: #eee;
 
