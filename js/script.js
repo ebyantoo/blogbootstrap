@@ -33,9 +33,14 @@ $(window).scroll(function () {
 
 
     //===================== PORTOFOLIO ===================== 
-    if (wScroll > $('.portofolio').offset().top -250)  {
-        
-        $('.portofolio .thumbnail').addClass('muncul');
+    if (wScroll > $('.portofolio').offset().top - 250) {
+        $('.portofolio .thumbnail').each(function (i) {
+            setTimeout(function () {
+                $('.portofolio .thumbnail').eq(i).addClass('muncul');
+            }, 300 * (i+1));
+        });
+
+
     }
 
 });
